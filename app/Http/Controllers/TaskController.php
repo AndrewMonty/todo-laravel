@@ -19,7 +19,6 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        dump($request->input());
         $task = Task::create($request->input());
 
         return $task->fresh();
